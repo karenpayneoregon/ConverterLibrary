@@ -121,6 +121,21 @@ namespace ConverterLibrary
 
         }
 
+        /// <summary>
+        /// Get all non-double values
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <returns></returns>
+        public static int[] GetNonDoubleIndexes(this string[] sender)
+        {
+            return sender.Select(
+                    (item, index) => double.TryParse(item, out var tResult) ?
+                        new { IsDouble = true, Index = index } :
+                        new { IsDouble = false, Index = index })
+                .ToArray()
+                .Where(item => item.IsDouble == false).Select(item => item.Index).ToArray();
+        }
+
         #endregion
 
         #region decimal convert methods
@@ -172,7 +187,20 @@ namespace ConverterLibrary
             return decimalArray;
 
         }
-
+        /// <summary>
+        /// Get all non-decimal values
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <returns></returns>
+        public static int[] GetNonDecimalIndexes(this string[] sender)
+        {
+            return sender.Select(
+                    (item, index) => decimal.TryParse(item, out var tResult) ?
+                        new { IsDecimal = true, Index = index } :
+                        new { IsDecimal = false, Index = index })
+                .ToArray()
+                .Where(item => item.IsDecimal == false).Select(item => item.Index).ToArray();
+        }
         #endregion
 
         #region float convert methods
@@ -223,7 +251,20 @@ namespace ConverterLibrary
             return floatArray;
 
         }
-
+        /// <summary>
+        /// Get all non-float values
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <returns></returns>
+        public static int[] GetNonFloatIndexes(this string[] sender)
+        {
+            return sender.Select(
+                    (item, index) => float.TryParse(item, out var tResult) ?
+                        new { IsFloat = true, Index = index } :
+                        new { IsFloat = false, Index = index })
+                .ToArray()
+                .Where(item => item.IsFloat == false).Select(item => item.Index).ToArray();
+        }
         #endregion
 
         #region short convert methods
@@ -274,7 +315,20 @@ namespace ConverterLibrary
             return shortArray;
 
         }
-
+        /// <summary>
+        /// Get all non-short values
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <returns></returns>
+        public static int[] GetNonShortIndexes(this string[] sender)
+        {
+            return sender.Select(
+                    (item, index) => short.TryParse(item, out var tResult) ?
+                        new { IsShort = true, Index = index } :
+                        new { IsShort = false, Index = index })
+                .ToArray()
+                .Where(item => item.IsShort == false).Select(item => item.Index).ToArray();
+        }
         #endregion
 
     }
