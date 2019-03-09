@@ -37,6 +37,7 @@ namespace Test
             int[] result = stringArray.ToIntegerArray();
 
             Assert.IsFalse(result.SequenceEqual(expected));
+           
         }
         /// <summary>
         /// Given a string array of mix types should return a int array

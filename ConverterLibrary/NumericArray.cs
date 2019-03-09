@@ -37,6 +37,20 @@ namespace ConverterLibrary
 
         }
         /// <summary>
+        /// Get all non-integer values
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <returns></returns>
+        public static int[] GetNonIntegerIndexes(this string[] sender)
+        {
+            return sender.Select(
+                (item, index) => int.TryParse(item, out var tResult) ? 
+                    new {IsInteger = true,Index = index} : 
+                    new {IsInteger = false,Index = index})
+                .ToArray()
+                .Where(item => item.IsInteger == false).Select(item => item.Index).ToArray();
+        }
+        /// <summary>
         /// Convert all values in array to int array where non int values will be set to the default value.
         /// </summary>
         /// <param name="sender">string array</param>
