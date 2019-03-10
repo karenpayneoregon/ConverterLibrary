@@ -7,6 +7,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConverterLibrary", "Convert
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{BE9341A4-6D6E-482B-B425-1BE4FECD0A35}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Examples", "Examples\Examples.csproj", "{449C42F2-9D9A-4A98-897F-316943719AC7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{58004648-156E-436D-90DC-32859CA3D03F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTest", "UnitTest", "{CDAC4B90-A6EA-418C-8965-B746EA01140B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ExampleProjects", "ExampleProjects", "{0E25D8C0-F789-4853-95CF-631B91A225C8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,9 +29,18 @@ Global
 		{BE9341A4-6D6E-482B-B425-1BE4FECD0A35}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE9341A4-6D6E-482B-B425-1BE4FECD0A35}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BE9341A4-6D6E-482B-B425-1BE4FECD0A35}.Release|Any CPU.Build.0 = Release|Any CPU
+		{449C42F2-9D9A-4A98-897F-316943719AC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{449C42F2-9D9A-4A98-897F-316943719AC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{449C42F2-9D9A-4A98-897F-316943719AC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{449C42F2-9D9A-4A98-897F-316943719AC7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3F5F728D-41EF-4AB3-AC7F-F373B589A787} = {58004648-156E-436D-90DC-32859CA3D03F}
+		{BE9341A4-6D6E-482B-B425-1BE4FECD0A35} = {CDAC4B90-A6EA-418C-8965-B746EA01140B}
+		{449C42F2-9D9A-4A98-897F-316943719AC7} = {0E25D8C0-F789-4853-95CF-631B91A225C8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {36FA560F-F4AF-490D-80A3-79671294F9E2}
